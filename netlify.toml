@@ -1,5 +1,5 @@
 [build]
-  command = "pip3 install -r requirements.txt"
+  command = "npm install next"
   publish = "out"
 
 [[plugins]]
