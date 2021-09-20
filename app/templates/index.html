@@ -47,14 +47,14 @@
         <!-- Card  -->
         <div title="{% if item.media %} {{item.mime_type}} | {{item.human_size}} {% else %} Text message {% endif %}"
             href="{{item.url}}"
-            class="text-sm items-center justify-center w-full min-h-full sm:w-2/5 md:w-1/4 lg:w-1/6 rounded m-2 shadow hover:shadow-lg dark:bg-red-700">
+            class="text-sm items-center justify-center w-full min-h-full sm:w-2/5 md:w-1/4 lg:w-1/6 rounded m-2 shadow hover:shadow-lg dark:bg-gray-600">
 
             {% if item.media %}
 
                 <a href="{{item.url}}"><img src="{{item.thumbnail}}" class="w-full rounded shadow-inner"></a>
                 <div class="p-2">{{item.insight}}</div>
                 <!-- Buttons container -->
-                <span class="inline-flex mb-1 rounded shadow-inner dark:bg-green-500">                    
+                <span class="inline-flex mb-1 rounded shadow-inner dark:bg-gray-600">                    
                     {% if not block_downloads %}
                         <!-- Direct file download button -->
                         <a href="{{item.download}}"
@@ -68,7 +68,7 @@
 
                         {% if 'video' in item.mime_type %}
                             <!--  Kodi/media player supported url ending with v.mp4 -->
-                            <a title="v.mp4" href="{{item.download}}"
+                            <a title="broadrobot.mp4" href="{{item.download}}"
                                 class="flex-1 hover:bg-gray-600 text-gray-900 font-semibold py-1 px-2 rounded items-center">
                                 <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
                                     stroke="currentColor">
