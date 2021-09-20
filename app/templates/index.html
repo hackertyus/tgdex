@@ -7,7 +7,7 @@
 {% endblock %}
 
 <div class="block md:flex justify-between items-center px-4 text-center border-b-2">
-	<div class="m-2 block md:flex items-center justify-center md:justify-start text-2xl md:text-right font-bold text-blue-500">
+	<div class="m-2 block md:flex items-center justify-center md:justify-start text-2xl md:text-right font-bold text-gray-600">
 		<img class="mx-auto md:ml-0 md:mr-1 my-4 md:my-2 w-16 h-16 rounded-full bg-black outline-none" src="{{logo}}">
         <a href="javascript:window.location.href=window.location.href"> {{name}} </a>
     </div>
@@ -22,7 +22,7 @@
                         placeholder="Ara">
                     <div class="p-1">
                         <button
-                            class="bg-blue-500 text-white rounded-full p-2 hover:bg-blue-400 focus:outline-none w-12 h-12 flex items-center justify-center">
+                            class="bg-blue-500 text-white rounded-full p-2 hover:bg-gray-600 focus:outline-none w-12 h-12 flex items-center justify-center">
                             <div><svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
                                     stroke="currentColor">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -58,7 +58,7 @@
                     {% if not block_downloads %}
                         <!-- Direct file download button -->
                         <a href="{{item.download}}"
-                            class="flex-1 hover:bg-blue-300 text-gray-900 font-semibold py-1 px-2 rounded items-center">
+                            class="flex-1 hover:bg-gray-600 text-gray-900 font-semibold py-1 px-2 rounded items-center">
                             <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
                                 stroke="currentColor">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -69,7 +69,7 @@
                         {% if 'video' in item.mime_type %}
                             <!--  Kodi/media player supported url ending with v.mp4 -->
                             <a title="v.mp4" href="{{item.download}}"
-                                class="flex-1 hover:bg-blue-300 text-gray-900 font-semibold py-1 px-2 rounded items-center">
+                                class="flex-1 hover:bg-gray-600 text-gray-900 font-semibold py-1 px-2 rounded items-center">
                                 <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
                                     stroke="currentColor">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -81,7 +81,7 @@
 
                             <!-- One click single item playlist Download -->
                             <button title="{{item.filename}}.m3u" onclick="singleItemPlaylist('{{item.download}}','{{item.filename}}', '{{m3u_option}}');"
-                                class="flex-1 hover:bg-blue-300 text-gray-900 font-semibold py-1 px-2 rounded items-center">
+                                class="flex-1 hover:bg-gray-600 text-gray-900 font-semibold py-1 px-2 rounded items-center">
                                 <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
                                     stroke="currentColor">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
