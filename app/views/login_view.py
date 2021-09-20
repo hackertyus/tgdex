@@ -18,18 +18,18 @@ class LoginView:
             location = location.update_query({"redirect_to": redirect_to})
 
         if "username" not in post_data:
-            loc = location.update_query({"error": "Username missing"})
+            loc = location.update_query({"error": "Kullanıcı adı eksik"})
             return web.HTTPFound(location=loc)
 
         if "password" not in post_data:
-            loc = location.update_query({"error": "Password missing"})
+            loc = location.update_query({"error": "Şifre eksik"})
             return web.HTTPFound(location=loc)
 
         authenticated = (post_data["username"] == req.app["username"]) and (
             post_data["password"] == req.app["password"]
         )
         if not authenticated:
-            loc = location.update_query({"error": "Wrong Username or Passowrd"})
+            loc = location.update_query({"error": "Yanlış Kullanıcı Adı veya Şifre"})
             return web.HTTPFound(location=loc)
 
         session = await new_session(req)
