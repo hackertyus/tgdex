@@ -62,10 +62,10 @@ async def setup_routes(app, handler):
             if isinstance(entity, User) and not index_private:
                 log.debug(f"{chat.title}, private: {index_private}")
                 continue
-            elif isinstance(entity, Channel) and not index_channel:
+            if isinstance(entity, Channel) and not index_channel:
                 log.debug(f"{chat.title}, channel: {index_channel}")
                 continue
-            elif isinstance(entity, Chat) and not index_group:
+            if isinstance(entity, Chat) and not index_group:
                 log.debug(f"{chat.title}, group: {index_group}")
                 continue
 

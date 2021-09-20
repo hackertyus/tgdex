@@ -47,7 +47,7 @@ class Views(
                     1  # increment url_len just incase the hash is already used.
                 )
                 continue
-            elif (
+            if (
                 self.url_len > SHORT_URL_LEN
             ):  # reset url_len to initial if hash was unique.
                 self.url_len = SHORT_URL_LEN
